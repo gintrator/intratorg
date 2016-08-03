@@ -1,0 +1,179 @@
+
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+
+body {
+	margin: 0;
+	background-image: url('../texture/simple_dashed.png');
+	min-width: 800px;
+	font-family: 'Libre Baskerville', serif;
+	color: #303030;
+}
+
+/* General Elements */
+pre {
+    font-family: Monaco, monospace;
+}
+
+ul {
+	list-style-type: square;
+}
+
+a {
+	color: #007F30;
+}
+
+a:hover {
+	color: #338533;
+}
+
+a:visited {
+	color: #007F30;
+}
+
+/* Header */
+
+#green-stripe{
+	background-color: #007F30;
+	height: 9px;
+	margin-top: -3px;
+}
+
+#g-flag {
+	position: absolute;
+	top: -3px;
+	transition: top .15s ease;
+}
+
+#g-flag:hover {
+	top: 0px;
+}
+
+header {
+	max-width: 1000px;
+	margin: auto;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-family: 'Lobster', cursive;
+	margin-bottom: -0.8em;
+}
+
+ul#nav-list {
+	padding-left: 135px;
+	font-size: 150%;
+}
+
+li.nav-item {
+	display: inline;
+	margin-left: 10px;
+}
+
+a.nav-link {
+	text-decoration: none;
+	color: #F5F5F5;
+	transition: text-shadow .10s linear;
+}
+
+a.nav-link:hover {
+	text-decoration: none;
+	text-shadow: 0px 0px 15px #F5F5F5;
+}
+
+a.nav-link:visited {
+	color: #F5F5F5;
+}
+
+#name {
+	float: right;
+	font-size: 200%;
+	color: #F5F5F5;
+	margin-top: -8px;
+}
+
+
+/* Content */
+
+div#page-title {
+    font-family: 'Lobster', cursive;
+	text-align: right;
+	width: 100%;
+	max-width: 1000px;
+	font-size: 150%;
+    margin: auto;
+}
+
+
+#content-wrapper {
+	background-image: url('../texture/grid_noise.png');
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#content {
+	/*overflow: hidden;*/
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	padding-bottom: 1em;
+	max-width: 1000px;
+	margin: auto;
+}
+
+/* Image Gallery */
+
+.img-gallery {
+	text-align: center;
+}
+
+.img-gallery img {
+	width: 24%;
+	margin: 2px;
+}
+
+#img-gallery-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/*background-color: rgba(0, 0, 0, 0.93);*/
+	background-image:url('../texture/swirl_pattern.png');
+
+}
+
+#img-gallery-overlay img {
+	margin-top: 3em;
+	padding: 0;
+	max-width: 80%;
+	max-height: 80%;
+	opacity: 1;
+
+}
+
+#img-gallery-overlay-close {
+	position: fixed;
+	bottom: 0.3em;
+	width: 100%;
+	font-family: 'Lobster', cursive;
+	font-size: 200%;
+	text-align: center;
+}
+
+
+/* Footer */
+
+#footer-wrapper {
+	width: 100%;
+}
+
+#footer {
+	font-family: 'Lobster', cursive;
+	padding: 1em;
+	max-width: 1000px;
+	text-align: center;
+	margin: auto;
+	color: #8F8F8F	
+}
+

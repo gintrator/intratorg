@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<title>Gabriel Intrator</title>
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+	<link rel='stylesheet' href='css/style.css' />
+
+</head>
+
+<body>
+	
+	<div id="green-stripe"></div>
+    <header>
+        
+        <a href="/"><img id="g-flag" src="img/G.png"></a>
+
+            <div id="name">Gabriel Intrator</div>
+            
+            <ul id="nav-list">
+                <li class="nav-item"><a href="/" class="nav-link">Projects</a>
+                <li class="nav-item"><a href="/resume" class="nav-link">Resume</a>
+            </ul>
+    </header>
+	
+	<div id="content-wrapper">
+		<div id="page-title"><h1>Hello!</h1></div>
+		<div id="content">
+            <h2>About Me</h2>
+             <p>
+                My name's Gabriel. I'm a senior at UC Berkeley. I believe in tmux and Vim. My <a href="https://github.com/gintrator/dotfiles">dotfiles</a>.
+            <p>
+            
+            <h2>Some Projects</h2>
+            
+            <h3>Beaker</h3>
+
+            <a href="https://github.com/gintrator/Beaker">Source</a>
+
+            <p>
+                Put it in a bottle and shake it all up, affectionately named after Flask.
+            </p>
+
+            <p>
+                This project is an experiment in building a small full-stack web service. This is mainly an attempt to figure out how something like Flask is implemented by duplicating some of its features. Beaker implements the <a href="https://www.python.org/dev/peps/pep-0333/">WSGI</a> app/server interface, which allows it to run on any WSGI compliant Python server. This project also contains a simple implementation of a WSGI server and an example app.
+            </p>
+
+            <p>
+                Endpoints are declared via decorators, as in Flask. You can also declare the type of content that the endpoint will return. URL parameters are forwarded into the handling function in req.args, and path variables are injected as named variables into the function. Here's an example.
+                <pre>
+app = Beaker('Sample App')
+
+@app.get('/person/&lt;name&gt;/&lt;age&gt;', mimetype='text/html')
+def person(req, name, age):
+html = "&lt;p&gt;Hello my name is {0} and I am {1} years old.&lt;p&gt;".format(name, age)
+return Response(body=html, status=200)</pre>
+                A request to the endpoint '/person/bob/21' will return the HTML  '&lt;p&gt;Hello my name is bob and I am 21 years old.&lt;p&gt;'.
+            <p>
+
+            <h3>Graphics</h3>
+                <p>
+                    Various graphics projects implementing things like a raytracer, bezier curve interpolation, and inverse kinematics. More information and images <a href="graphics.html">here</a>.
+                </p>
+
+            <h3>Spyace</h3>
+                <a href="https://github.com/gintrator/Space">Source</a>
+                <img style="float: right;" src="https://raw.githubusercontent.com/gintrator/Space/master/pix/spaceship.gif">
+
+                <p>
+
+                    Fun little 2d space shooter built on pygame. Dodge asteroid and UFO's while protecting yourself. Features powerups like shields and faster firing rate, as well as homemade clip art.
+                </p>
+
+   
+        </div>
+    </div>
+
+							
+
+	<div id="footer-wrapper">
+		<div id="footer">
+			&copy; Excessive Technology 2016. Patterns from subtlepatterns.com.
+		</div>
+	</div>
+		
+</body>
+	
+
+
+</html>
