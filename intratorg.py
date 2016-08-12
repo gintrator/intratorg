@@ -2,6 +2,10 @@ from werkzeug.serving import run_simple
 from beaker import Beaker
 from beaker import Request
 from beaker import Response
+
+import logging
+from logging.handlers import RotatingFileHandler
+
 import json
 
 port = 5000
@@ -18,4 +22,9 @@ def gabriel(req):
     return Response(status=200, body=me_json)
 
 if __name__ == '__main__':
+    handler = RotatingFileHandler('logs/intratorg.log', maxBytes=1024*10, backupCount=20)
+    handler.setLevel(logging.INFO)
+    log = logging.getLogger('werkzeug')
+    log.setLevel(logging.INFO)
+    log.addHandler(handler)
     run_simple('localhost', 5000, app)

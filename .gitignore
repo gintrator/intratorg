@@ -1,0 +1,5 @@
+beaker.py
+.DS_Store
+*.log
+*.pyc
+*.swp
